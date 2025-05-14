@@ -32,10 +32,9 @@ app.use(session({
             secret: process.env.MONGODB_SESSION_SECRET
         }
     }),
-    resave: true,
+    resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: false,
         maxAge: 60 * 60 * 1000 // 1 hour
     }
 }));
